@@ -1,0 +1,51 @@
+.chip-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-input {
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.chips-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.chip {
+  background-color: #e0e0e0;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.remove-icon {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.filtered-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.9rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.filtered-item {
+  padding: 0.3rem 0.4rem;
+  cursor: pointer;
+  width: 250px;
+}
+
+.filtered-item:hover {
+  background-color: #f0f0f0;
+}
