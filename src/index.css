@@ -1,7 +1,6 @@
 .chip-input-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 5px;
 }
 
@@ -14,8 +13,9 @@
 .chips-container {
   display: flex;
   flex-direction: row;
-  align-self: flex-start;
-  margin-top: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
 }
 
 .chip {
