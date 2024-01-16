@@ -8,7 +8,7 @@ import React, {
 import Input from "../common/Input";
 import { ChipProps } from "../../interfaces/Chip.interface";
 
-let lastChip: ChipProps = {
+let endChip: ChipProps = {
   id: 0,
   label: "",
 };
@@ -62,8 +62,7 @@ const ChipComponent: React.FC = () => {
     const removedChip = chips.find((chip) => chip.id === id);
 
     if (chips.length === 1) {
-      (lastChip.id = 0), (lastChip.label = removedChip?.label || "");
-      console.log(lastChip);
+      (endChip.id = 0), (endChip.label = removedChip?.label || "");
     }
 
     const updatedChips = chips.filter((chip) => chip.id !== id);
@@ -91,7 +90,7 @@ const ChipComponent: React.FC = () => {
       removeLastChip();
     } else if (chips.length === 0) {
       const newChips: ChipProps[] = [
-        { id: chips.length + 1, label: lastChip?.label },
+        { id: chips.length + 1, label: endChip?.label },
       ];
       setChips(newChips);
     }
