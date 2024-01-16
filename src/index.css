@@ -13,7 +13,7 @@
 
 .chips-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-self: flex-start;
   margin-top: 1rem;
 }
@@ -29,7 +29,8 @@
 
 .remove-icon {
   cursor: pointer;
-  margin-left: auto;
+  margin: auto;
+  margin-left: 4px;
 }
 
 .filtered-list {
