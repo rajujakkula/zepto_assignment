@@ -8,6 +8,11 @@ import React, {
 import Input from "../common/Input";
 import { ChipProps } from "../../interfaces/Chip.interface";
 
+let lastChip: ChipProps = {
+  id: 0,
+  label: "",
+};
+
 const ChipComponent: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [chips, setChips] = useState<ChipProps[]>([]);
@@ -56,6 +61,11 @@ const ChipComponent: React.FC = () => {
   const removeChip = (id: number) => {
     const removedChip = chips.find((chip) => chip.id === id);
 
+    if (chips.length === 1) {
+      (lastChip.id = 0), (lastChip.label = removedChip?.label || "");
+      console.log(lastChip);
+    }
+
     const updatedChips = chips.filter((chip) => chip.id !== id);
     setChips(updatedChips);
 
@@ -79,6 +89,11 @@ const ChipComponent: React.FC = () => {
   const handleBackspace = () => {
     if (inputValue === "" && chips?.length > 0) {
       removeLastChip();
+    } else if (chips.length === 0) {
+      const newChips: ChipProps[] = [
+        { id: chips.length + 1, label: lastChip?.label },
+      ];
+      setChips(newChips);
     }
   };
 
