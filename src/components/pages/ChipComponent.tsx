@@ -110,24 +110,25 @@ const ChipComponent: React.FC = () => {
     }
   }, [chips]);
 
-  return (
+  return  (
     <div className="chip-input-container">
-      <div className="chips-container">
-        {chips?.map((chip) => (
-          <div
-            key={chip.id}
-            className={`chip ${
-              highlightedChip === chip.id ? "highlighted" : ""
-            }`}
-            onClick={() => setHighlightedChip(chip.id)}
-          >
-            {chip.label}
-            <span className="remove-icon" onClick={() => removeChip(chip.id)}>
-              X
-            </span>
-          </div>
-        ))}
-        {/* </div> */}
+      <div>
+        <div className="chips-container">
+          {chips?.map((chip) => (
+            <div
+              key={chip.id}
+              className={`chip ${
+                highlightedChip === chip.id ? "highlighted" : ""
+              }`}
+              onClick={() => setHighlightedChip(chip.id)}
+            >
+              {chip.label}
+              <span className="remove-icon" onClick={() => removeChip(chip.id)}>
+                X
+              </span>
+            </div>
+          ))}
+        </div>
         <Input
           ref={inputRef}
           type="text"
