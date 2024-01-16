@@ -1,6 +1,6 @@
 
 # Deployed on netlify
-https://65a61baff8369c0007bceecc--eclectic-paprenjak-7a0b48.netlify.app/
+https://65a63ab164401d0008d70bd6--eclectic-paprenjak-7a0b48.netlify.app/
 
 # React + TypeScript + Vite
 
